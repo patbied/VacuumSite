@@ -44,10 +44,13 @@ body {
   transform: translateY(-100%);
   transition: 500ms ease-in-out all;
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 850px) {
   .quickContact.scrolled {
     transform: translateY(0px);
     transition: 500ms ease-in-out all;
+  }
+  #quickNoVisible {
+    display: none;
   }
 }
 header {
