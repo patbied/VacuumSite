@@ -66,6 +66,15 @@ body {
   transition: 500ms ease-in-out all;
 }
 
+@media screen and (max-width: 800px) {
+  .quickContact.scrolled {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    -webkit-transition: 500ms ease-in-out all;
+    transition: 500ms ease-in-out all;
+  }
+}
+
 header {
   height: 20vh;
   border-bottom: 5px solid black;
@@ -253,12 +262,20 @@ header nav {
 }
 
 /* Burger button for navbar for smaller devices end*/
+.mobile-nav.scrolled {
+  margin: 15vh 0vw 0vh 0vw;
+  -webkit-transition: 500ms all ease-in-out;
+  transition: 500ms all ease-in-out;
+}
+
 .mobile-nav {
+  -webkit-transition: 500ms all ease-in-out;
+  transition: 500ms all ease-in-out;
   height: 100vh;
   top: 0;
   width: 0%;
   background-color: black;
-  margin: 15vh 0vw 0vh 0vw;
+  margin: 20vh 0vw 0vh 0vw;
   position: fixed;
   right: 0;
   text-align: center;

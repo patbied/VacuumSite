@@ -22,10 +22,12 @@ const quickContactObserver = new IntersectionObserver(function (entries) {
       quickContact.classList.add('scrolled');
       header.classList.add('scrolled');
       navbar.classList.add('scrolled');
+      mobileNav.classList.add('scrolled');
     } else {
       quickContact.classList.remove('scrolled');
       header.classList.remove('scrolled');
       navbar.classList.remove('scrolled');
+      mobileNav.classList.remove('scrolled');
     }
   });
 }, quickContactOptions);

@@ -44,7 +44,12 @@ body {
   transform: translateY(-100%);
   transition: 500ms ease-in-out all;
 }
-
+@media screen and (max-width: 800px) {
+  .quickContact.scrolled {
+    transform: translateY(0px);
+    transition: 500ms ease-in-out all;
+  }
+}
 header {
   height: 20vh;
   border-bottom: 5px solid black;
@@ -190,12 +195,17 @@ header nav {
   position: relative;
 }
 /* Burger button for navbar for smaller devices end*/
+.mobile-nav.scrolled {
+  margin: 15vh 0vw 0vh 0vw;
+  transition: 500ms all ease-in-out;
+}
 .mobile-nav {
+  transition: 500ms all ease-in-out;
   height: 100vh;
   top: 0;
   width: 0%;
   background-color: black;
-  margin: 15vh 0vw 0vh 0vw;
+  margin: 20vh 0vw 0vh 0vw;
   position: fixed;
   right: 0;
   text-align: center;
