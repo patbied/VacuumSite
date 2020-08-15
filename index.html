@@ -1,0 +1,79 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/46f17cea9e.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>Suck it up Vac repairs</title>
+  </head>
+  <body>
+    <header>
+      <div id="quickContactt" class="quickContact">
+        Call us at
+        <a id="quickPhone" href="tel:+4917640206387"
+          ><i class="fas fa-phone"></i>+48 111 111 111</a
+        >
+        &nbsp;or visit us at &nbsp;<i class="fas fa-address-book"></i>&nbsp; 24
+        Orchard Street
+      </div>
+      <div class="navbar">
+        <div class="navBrand">
+          <h1 class="navTitle"><a href="#"> Suck it up Vac repairs</a></h1>
+        </div>
+        <nav>
+          <span class="menu-icon menu-btn">
+            <span class="menu-btn__burger"></span>
+          </span>
+          <ul>
+            <li class="navItem"><a href="#Services"> Our services</a></li>
+            <li class="navItem">
+              <a href="#Before&After"><p>Before & After</p></a>
+            </li>
+
+            <li class="navItem"><a href="#About"> About us</a></li>
+            <li>
+              <a href="#Contact"> <span id="contactBox"> Contact</span></a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div id="body">
+      <div class="mobile-nav">
+        <span><a href="#Services" class="mobileNavItem"> Our services</a></span>
+        <span>
+          <a href="#Before&After" class="mobileNavItem">
+            Before & After</a
+          ></span
+        >
+
+        <span><a href="#About" class="mobileNavItem"> About us</a></span>
+        <span><a href="#Contact" class="mobileNavItem"> Contact</a></span>
+      </div>
+      <div class="Hero">
+        <div class="heroTextBox">
+          <h1 class="heroText">
+            lorem ipsum dolor sit amet consectetur adipiscing elit
+          </h1>
+        </div>
+      </div>
+      <div id="Services" class="BeforeAfter jumptarget"></div>
+    </div>
+  </body>
+
+  <script src="js/index.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0/dist/smooth-scroll.polyfills.min.js"></script>
+  <script>
+    var scroll = new SmoothScroll('a[href*="#"]', {
+      speed: 800,
+    });
+  </script>
+</html>

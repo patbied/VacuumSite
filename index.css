@@ -1,0 +1,355 @@
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  width: 100%;
+  height: 100%;
+}
+
+::-moz-selection {
+  background: #136bd0;
+  /* WebKit/Blink Browsers */
+}
+
+::selection {
+  background: #136bd0;
+  /* WebKit/Blink Browsers */
+}
+
+::-moz-selection {
+  background: #136bd0;
+  /* Gecko Browsers */
+}
+
+.navbar {
+  height: 15vh;
+  width: 90%;
+  margin: auto;
+  padding-top: 30px;
+  -webkit-transition: 500ms ease-in-out all;
+  transition: 500ms ease-in-out all;
+}
+
+.navbar.scrolled {
+  padding-top: 0px;
+  -webkit-transition: 500ms ease-in-out all;
+  transition: 500ms ease-in-out all;
+}
+
+.quickContact {
+  height: 5vh;
+  width: 100%;
+  margin: auto;
+  background-color: white;
+  text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 500ms ease-in-out all;
+  transition: 500ms ease-in-out all;
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+}
+
+.quickContact.scrolled {
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  -webkit-transition: 500ms ease-in-out all;
+  transition: 500ms ease-in-out all;
+}
+
+header {
+  height: 20vh;
+  border-bottom: 5px solid black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  background-color: white;
+  overflow: hidden;
+  -webkit-transition: 500ms ease-in-out all;
+  transition: 500ms ease-in-out all;
+}
+
+header.scrolled {
+  height: 15vh;
+  -webkit-transition: 500ms ease-in-out all;
+  transition: 500ms ease-in-out all;
+}
+
+header a {
+  text-decoration: none;
+  color: black;
+  text-transform: uppercase;
+}
+
+header a:hover {
+  color: #136bd0;
+}
+
+header .navItem {
+  font-size: 16px;
+}
+
+header ul {
+  margin: 0px;
+  padding: 0px;
+}
+
+header li {
+  display: inline;
+  padding: 0px 20px 0px 20px;
+}
+
+header li #contactBox {
+  border-radius: 15px;
+  border: 1px solid #136bd0;
+  padding: 10px;
+  -webkit-transition: all 500ms;
+  transition: all 500ms;
+}
+
+header li #contactBox:hover {
+  background-color: #136bd0;
+  color: white;
+  -webkit-transition: all 500ms;
+  transition: all 500ms;
+  text-decoration: none !important;
+}
+
+@media screen and (max-width: 900px) {
+  ul {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  span.menu-btn {
+    display: none;
+  }
+  span.menu-btn__burger {
+    display: none;
+  }
+}
+
+header li a {
+  position: relative;
+}
+
+header li a p {
+  margin: none;
+  padding: none;
+  display: inline;
+}
+
+.navItem a:after {
+  content: '';
+  position: absolute;
+  bottom: -5;
+  background-color: #136bd0;
+  -webkit-transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  display: block;
+  height: 2px;
+  left: 50%;
+  width: 0;
+}
+
+a:hover:after {
+  width: 100%;
+  left: 0;
+}
+
+header .navBrand {
+  float: left;
+}
+
+header .navBrand h1 {
+  margin: 0;
+}
+
+header nav {
+  float: right;
+  margin-top: 10px;
+  height: 10vh;
+}
+
+/* Burger button for navbar for smaller devices*/
+.menu-btn {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  /* border: 3px solid #fff; */
+}
+
+.menu-btn__burger {
+  width: 50px;
+  height: 6px;
+  background: black;
+  border-radius: 5px;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.menu-btn__burger::before,
+.menu-btn__burger::after {
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 6px;
+  background: black;
+  border-radius: 5px;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.menu-btn__burger::before {
+  -webkit-transform: translateY(-16px);
+          transform: translateY(-16px);
+}
+
+.menu-btn__burger::after {
+  -webkit-transform: translateY(16px);
+          transform: translateY(16px);
+}
+
+/* ANIMATION */
+.menu-btn.open .menu-btn__burger {
+  -webkit-transform: translateX(-50px);
+          transform: translateX(-50px);
+  background: transparent;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.menu-btn.open .menu-btn__burger::before {
+  -webkit-transform: rotate(45deg) translate(35px, -35px);
+          transform: rotate(45deg) translate(35px, -35px);
+  background: black;
+}
+
+.menu-btn.open .menu-btn__burger::after {
+  -webkit-transform: rotate(-45deg) translate(35px, 35px);
+          transform: rotate(-45deg) translate(35px, 35px);
+  background: black;
+}
+
+#body {
+  position: relative;
+}
+
+/* Burger button for navbar for smaller devices end*/
+.mobile-nav {
+  height: 100vh;
+  top: 0;
+  width: 0%;
+  background-color: black;
+  margin: 15vh 0vw 0vh 0vw;
+  position: fixed;
+  right: 0;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: width 500ms;
+  transition: width 500ms;
+  overflow: hidden;
+  z-index: 999;
+}
+
+.mobile-nav.open {
+  overflow: hidden;
+  color: white;
+  -webkit-transition: width 500ms;
+  transition: width 500ms;
+  overflow: hidden;
+  width: 50%;
+  z-index: 999;
+}
+
+.mobile-nav .mobileNavItem {
+  margin-top: 50px;
+  text-decoration: none;
+  display: block;
+  font-size: 25px;
+  color: transparent;
+  overflow: hidden;
+  -webkit-transition-delay: 300ms;
+          transition-delay: 300ms;
+}
+
+.mobile-nav .mobileNavItem.open {
+  margin-top: 50px;
+  text-decoration: none;
+  display: block;
+  font-size: 25px;
+  color: white;
+  overflow: hidden;
+}
+
+/* HERO AREA */
+.Hero {
+  margin-top: 15vh;
+  width: 100%;
+  height: 70vh;
+  background-image: url("images/vacuum-cleaner-657719_1920.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 2;
+  position: relative;
+}
+
+.Hero .heroTextBox {
+  width: 40%;
+  background-color: rgba(24, 24, 24, 0.7);
+  border-radius: 2px;
+  text-align: center;
+  margin-left: 20%;
+}
+
+.heroText {
+  color: white;
+  font-size: 40px;
+}
+
+@media screen and (max-width: 750px) {
+  .heroText {
+    font-size: 30px;
+  }
+}
+
+/* HERO AREA  END*/
+.BeforeAfter {
+  width: 100%;
+  height: 100vh;
+  background-color: blue;
+}
+
+.jumptarget::before {
+  content: '';
+  display: block;
+  height: 20vh;
+  /* fixed header height*/
+}
+/*# sourceMappingURL=index.css.map */
