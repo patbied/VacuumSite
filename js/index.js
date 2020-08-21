@@ -13,7 +13,7 @@ const hero = document.querySelector('.Hero');
 const header = document.querySelector('header');
 const navbar = document.querySelector('.navbar');
 const quickContactOptions = {
-  rootMargin: '-400px',
+  rootMargin: '-300px',
 };
 
 const quickContactObserver = new IntersectionObserver(function (entries) {

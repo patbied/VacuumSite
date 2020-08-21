@@ -25,7 +25,7 @@ body {
 
 .navbar {
   height: 15vh;
-  width: 90%;
+  width: 100%;
   margin: auto;
   padding-top: 30px;
   -webkit-transition: 500ms ease-in-out all;
@@ -137,13 +137,13 @@ header li #contactBox:hover {
   text-decoration: none !important;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 960px) {
   ul {
     display: none;
   }
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 960px) {
   span.menu-btn {
     display: none;
   }
@@ -182,10 +182,18 @@ a:hover:after {
 
 header .navBrand {
   float: left;
+  margin-left: 20px;
 }
 
 header .navBrand h1 {
   margin: 0;
+}
+
+@media screen and (max-width: 495px) {
+  header .navBrand h1 {
+    margin-left: 0px;
+    font-size: 20px;
+  }
 }
 
 header nav {
@@ -359,17 +367,31 @@ header nav {
   }
 }
 
-/* HERO AREA  END*/
-.BeforeAfter {
-  width: 100%;
-  height: 100vh;
-  background-color: blue;
+@media screen and (max-width: 600px) {
+  .heroText {
+    font-size: 20px;
+  }
 }
 
-.jumptarget::before {
-  content: '';
-  display: block;
-  height: 20vh;
-  /* fixed header height*/
+/* HERO AREA  END*/
+.Services .ServiceGrid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(300px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 1rem;
+}
+
+.Services .ServiceTitle {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  height: 50px;
+}
+
+.Services .gallery__img {
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 /*# sourceMappingURL=index.css.map */
