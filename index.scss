@@ -296,13 +296,58 @@ header nav {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     grid-gap: 1rem;
+    justify-items: center;
   }
   .ServiceTitle {
     justify-content: center;
     text-align: center;
     height: 50px;
+    padding-top: 10vh;
   }
   .gallery__img {
     object-fit: cover;
+  }
+  h1::before {
+    display: block;
+    content: ' ';
+
+    visibility: hidden;
+    pointer-events: none;
+  }
+  .ServiceOffers {
+  }
+  .ServiceOfferTitle {
+    text-align: center;
+    background-color: white;
+    border: 2px solid #136bd0;
+    width: 65%;
+    height: auto;
+    padding: 20px 0px 20px 0px;
+    border-radius: 15px;
+    justify-content: center;
+    margin: auto;
+    position: relative;
+  }
+
+  .ServiceOfferOffer {
+    text-align: center;
+    background-color: white;
+    border: 2px solid #136bd0;
+    width: 65%;
+    height: auto;
+    padding: 20px 0px 20px 0px;
+    border-radius: 15px;
+    justify-content: center;
+    margin: 20px auto 20px auto;
+    transition: background-color 300ms ease-in-out;
+  }
+  .ServiceOfferOffer:nth-child(even) {
+    border: 2px solid lighten(#136bd0, 20%);
+  }
+  .ServiceOfferOffer:nth-child(even):hover {
+    background-color: lighten(#136bd0, 20%);
+  }
+  .ServiceOfferOffer:nth-child(odd):hover {
+    background-color: #136bd0;
   }
 }

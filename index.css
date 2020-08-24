@@ -380,6 +380,7 @@ header nav {
   -ms-grid-columns: (minmax(300px, 1fr))[auto-fill];
       grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   grid-gap: 1rem;
+  justify-items: center;
 }
 
 .Services .ServiceTitle {
@@ -388,10 +389,61 @@ header nav {
           justify-content: center;
   text-align: center;
   height: 50px;
+  padding-top: 10vh;
 }
 
 .Services .gallery__img {
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.Services h1::before {
+  display: block;
+  content: ' ';
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.Services .ServiceOfferTitle {
+  text-align: center;
+  background-color: white;
+  border: 2px solid #136bd0;
+  width: 65%;
+  height: auto;
+  padding: 20px 0px 20px 0px;
+  border-radius: 15px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: auto;
+  position: relative;
+}
+
+.Services .ServiceOfferOffer {
+  text-align: center;
+  background-color: white;
+  border: 2px solid #136bd0;
+  width: 65%;
+  height: auto;
+  padding: 20px 0px 20px 0px;
+  border-radius: 15px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 20px auto 20px auto;
+  -webkit-transition: background-color 300ms ease-in-out;
+  transition: background-color 300ms ease-in-out;
+}
+
+.Services .ServiceOfferOffer:nth-child(even) {
+  border: 2px solid #599ff0;
+}
+
+.Services .ServiceOfferOffer:nth-child(even):hover {
+  background-color: #599ff0;
+}
+
+.Services .ServiceOfferOffer:nth-child(odd):hover {
+  background-color: #136bd0;
 }
 /*# sourceMappingURL=index.css.map */
