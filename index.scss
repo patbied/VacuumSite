@@ -292,6 +292,17 @@ header nav {
 }
 /* HERO AREA  END*/
 .Services {
+  .beforeAndAfter {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    grid-gap: 1rem;
+    justify-items: center;
+  }
+  @media screen and (max-width: 500px) {
+    .beforeAndAfter {
+      grid-template-columns: 100%;
+    }
+  }
   .ServiceGrid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));

@@ -374,6 +374,22 @@ header nav {
 }
 
 /* HERO AREA  END*/
+.Services .beforeAndAfter {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(500px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  grid-gap: 1rem;
+  justify-items: center;
+}
+
+@media screen and (max-width: 500px) {
+  .Services .beforeAndAfter {
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+  }
+}
+
 .Services .ServiceGrid {
   display: -ms-grid;
   display: grid;
