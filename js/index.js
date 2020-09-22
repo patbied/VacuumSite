@@ -1,6 +1,13 @@
 const menuBtn = document.querySelector('.menu-btn');
 const mobileNav = document.querySelector('.mobile-nav');
 const mobileText = document.querySelectorAll('.mobileNavItem');
+const contactButton = document.getElementById('contactBox');
+const modal = document.querySelector('.Modal');
+const body = document.querySelector('.body');
+contactButton.addEventListener('click', () => {
+  modal.classList.toggle('open');
+  body.classList.add('blurred');
+});
 menuBtn.addEventListener('click', () => {
   menuBtn.classList.toggle('open');
   mobileNav.classList.toggle('open');

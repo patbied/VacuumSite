@@ -84,7 +84,7 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 999;
+  z-index: 998;
   background-color: white;
   overflow: hidden;
   -webkit-transition: 500ms ease-in-out all;
@@ -296,7 +296,7 @@ header nav {
   -webkit-transition: width 500ms;
   transition: width 500ms;
   overflow: hidden;
-  z-index: 999;
+  z-index: 998;
 }
 
 .mobile-nav.open {
@@ -306,7 +306,7 @@ header nav {
   transition: width 500ms;
   overflow: hidden;
   width: 50%;
-  z-index: 999;
+  z-index: 998;
 }
 
 .mobile-nav .mobileNavItem {
@@ -461,5 +461,42 @@ header nav {
 
 .Services .ServiceOfferOffer:nth-child(odd):hover {
   background-color: #136bd0;
+}
+
+.Modal {
+  position: fixed;
+  top: 50%;
+  width: 100%;
+  z-index: 999;
+  text-align: center;
+  display: none;
+}
+
+.Modal .ModalBody {
+  background-color: gray;
+  position: relative;
+  height: 30vh;
+  margin: auto;
+  width: 50%;
+}
+
+.Modal.open {
+  position: fixed;
+  top: 50%;
+  z-index: 999;
+  text-align: center;
+  display: inline;
+}
+
+.Modal.open .ModalBody {
+  background-color: white;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  position: relative;
+  height: 20vh;
+  margin: auto;
+  width: 50%;
+  border-radius: 15px;
+  border: 1px solid black;
 }
 /*# sourceMappingURL=index.css.map */
